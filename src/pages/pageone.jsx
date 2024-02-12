@@ -232,13 +232,13 @@ function Pageone() {
             <div className="aboutdis">
               <p className="mydesc">
                 <span id="aboutspan">(ABOUT ME)</span>
-                <br /> I'm a Frontend Developer with a passion for creating
+                <br /> I'm a Fullstack Developer with a passion for creating
                 products that not only look good but also solve real problems.
                 When I'm not sketching ideas on paper, you can find me
                 binge-watching a Netflix series or playing video games. My
                 design philosophy is simple: make it visually appealing,
                 functional, and bring a smile to people's faces. I'm the
-                designer you want on your team if you want to make people say 'I
+                developer you want on your team if you want to make people say 'I
                 need that in my life!'.
               </p>
               <a href="https://www.linkedin.com/in/sudarshan-bhuyan/" style={{
