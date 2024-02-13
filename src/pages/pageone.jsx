@@ -150,6 +150,13 @@ function Pageone() {
         duration: 1.5,
         delay: -1,
         ease: Expo.easeInOut,
+      })
+      .from(".projects", {
+        y: "100",
+        duration: 4,
+        ease: Expo.easeInOut,
+        delay: -1,
+        stagger: 0.2,
       });
 
     deeform();
@@ -209,6 +216,13 @@ function Pageone() {
           </div>
         </div>
         <div className="second">
+          <div className="bounding">
+            <div className="projects">
+              <a href="https://www.apdcl.org/website/" target="_blank" >
+                Some of my work &nbsp; <i class="ri-arrow-down-line"></i>{" "}
+              </a>
+            </div>
+          </div>
           <div className="elem">
             <img src={img1} alt="image" onClick={() => { window.open("https://mycarrental.onrender.com/", "_blank"); }} />
             <h1>Car Rental</h1>
