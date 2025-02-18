@@ -270,20 +270,18 @@ function Pageone() {
         <div className="forgot">
           <h4 id="fh41">(Have a look at my)</h4>
           <h4>
-            <button
-              onClick={handleResumeClick}
-              style={{
-                background: "none",
-                border: "none",
-                color: "white",
-                cursor: "pointer",
-                fontSize: "inherit",
-              }}
-            >
-              RESUME
-            </button>{" "}
-            <i className="ri-arrow-right-up-line"></i>
-          </h4>
+        <button onClick={() => window.open("https://drive.google.com/file/d/1VXR_GkByQ0F-i6Zc4yQkaRfhPfUCjS2G/view?usp=sharing", "_blank")}
+        style={{
+          background: "none",
+          border: "none",
+          color: "white",
+          cursor: "pointer",
+          fontSize: "inherit",
+        }}>
+    RESUME
+  </button>{" "}
+  <i className="ri-arrow-right-up-line"></i>
+      </h4>
         </div>
         <div className="footer">
           <div className="footercontent">
