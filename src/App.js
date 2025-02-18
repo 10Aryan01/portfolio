@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import 'remixicon/fonts/remixicon.css'
 import Pageone from './pages/pageone';
+import Resume from './pages/resume';
 function App() {
   return (
-    <div className="App">
-      <Pageone />
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Pageone/>}/>
+          <Route path="/resume" element={<Resume/>}/>
+        </Routes>
+      </Router>
   );
 }
 

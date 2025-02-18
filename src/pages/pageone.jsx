@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import img1 from "../pics/Rent.png";
+import { useNavigate } from "react-router-dom";
 import img2 from "../pics/IdeaGarage.png";
 import img3 from "../pics/Foodenza.png";
 import img4 from "../images/Aryan.jpg";
@@ -7,11 +8,16 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useEffect, useRef } from "react";
 import { gsap, Expo, stagger, duration } from "gsap";
+import resume from "./resume";
 
 function Pageone() {
   const scrollRef = useRef(null);
+  const navigate = useNavigate();
   const [formattedTime, setFormattedTime] = useState(getFormattedTime());
 
+  const handleResumeClick = () => {
+    window.open("/resume", "_blank");
+  };
   function updateTime() {
     setFormattedTime(getFormattedTime());
   }
@@ -19,7 +25,6 @@ function Pageone() {
     const intervalId = setInterval(updateTime, 1000);
     return () => clearInterval(intervalId);
   }, []);
-
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
@@ -166,6 +171,7 @@ function Pageone() {
 
   return (
     <>
+    <p class="desktop-warning">This site is best viewed on a desktop.</p>
       <div className="movecircle" id="movecircle"></div>
       <div className="main" ref={scrollRef}>
         <div className="hero">
@@ -175,7 +181,7 @@ function Pageone() {
           </div>
           <div className="heading">
             <div className="bounding">
-              <h1 className="boundingelem"> Fullstack</h1>
+              <h1 className="boundingelem"> Frontend</h1>
             </div>
             <div className="secondhead">
               <div className="bounding">
@@ -191,16 +197,16 @@ function Pageone() {
             </div>
             <div className="smallheading">
               <div className="bounding">
-                <h5 className="boundingelem">available for freelance</h5>
+                <h5 className="boundingelem"></h5>
               </div>
               <div className="bounding">
-                <h5 className="boundingelem">work from may 24'</h5>
+                <h5 className="boundingelem"></h5>
               </div>
             </div>
           </div>
           <div className="herofooter">
-            <a href="https://www.apdcl.org/website/" target="_blank" >
-              Currently working at APDCL <i class="ri-arrow-right-up-line"></i>{" "}
+            <a href="#" >
+              Available for freelance<i class="ri-arrow-right-up-line"></i>{" "}
             </a>
             <a href="">
               {/* <i class="ri-arrow-right-up-line"></i> */}
@@ -218,7 +224,7 @@ function Pageone() {
         <div className="second">
           <div className="bounding">
             <div className="projects">
-              <a href="https://www.apdcl.org/website/" target="_blank" >
+              <a target="_blank" style={{ cursor: "pointer" }}>
                 Some of my work &nbsp; <i class="ri-arrow-down-line"></i>{" "}
               </a>
             </div>
@@ -229,7 +235,7 @@ function Pageone() {
             <h5>2023</h5>
           </div>
           <div className="elem">
-            <img src={img2} alt="image" onClick={() => { window.open("https://ideagarage-production.up.railway.app/", "_blank"); }} />
+            <img src={img2} alt="image" onClick={() => { window.open("https://idea-garage.vercel.app/", "_blank"); }} />
             <h1>IdeaGarage</h1>
             <h5>2023</h5>
           </div>
@@ -246,7 +252,7 @@ function Pageone() {
             <div className="aboutdis">
               <p className="mydesc">
                 <span id="aboutspan">(ABOUT ME)</span>
-                <br /> I'm a Fullstack Developer with a passion for creating
+                <br /> I'm a Frontend Developer with a passion for creating
                 products that not only look good but also solve real problems.
                 When I'm not sketching ideas on paper, you can find me
                 binge-watching a Netflix series or playing video games. My
@@ -264,16 +270,25 @@ function Pageone() {
         <div className="forgot">
           <h4 id="fh41">(Have a look at my)</h4>
           <h4>
-            <a href="https://drive.google.com/file/d/1hqh9oGMDjULB3ugpJXuMpNQgP3DNwh3M/view"
-              target="_blank"
-              style={{ textDecoration: "none", color: "white" }}> RESUME</a>{" "}
-            <i class="ri-arrow-right-up-line"></i>
+            <button
+              onClick={handleResumeClick}
+              style={{
+                background: "none",
+                border: "none",
+                color: "white",
+                cursor: "pointer",
+                fontSize: "inherit",
+              }}
+            >
+              RESUME
+            </button>{" "}
+            <i className="ri-arrow-right-up-line"></i>
           </h4>
         </div>
         <div className="footer">
           <div className="footercontent">
             <div className="footerleft">
-              <h5>2024 &copy;</h5>
+              <h5>2025 &copy;</h5>
               <h5>{formattedTime}</h5>
             </div>
             <div className="footerright">

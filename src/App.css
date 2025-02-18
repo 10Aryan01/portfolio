@@ -292,3 +292,18 @@ body::-webkit-scrollbar {
   margin-top: 2vh;
   overflow: hidden;
 }
+.desktop-warning {
+  text-align: center;
+  background-color: #ffcc00;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-warning {
+    display: block;
+  }
+}
