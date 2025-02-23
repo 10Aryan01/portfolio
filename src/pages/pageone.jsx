@@ -290,7 +290,7 @@ function Pageone() {
               <h5>{formattedTime}</h5>
             </div>
             <div className="footerright">
-              <a href="https://www.instagram.com/" target="_blank">intragram</a>
+              /*<a href="https://www.instagram.com/" target="_blank">intrag</a>*/
               <a href="https://www.linkedin.com/in/sudarshan-bhuyan/" target="_blank">linkedin</a>
               <a href="https://twitter.com/home" target="_blank">twitter</a>
             </div>
