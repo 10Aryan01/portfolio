@@ -181,7 +181,7 @@ function Pageone() {
           </div>
           <div className="heading">
             <div className="bounding">
-              <h1 className="boundingelem"> Frontend</h1>
+              <h1 className="boundingelem"> Fullstack</h1>
             </div>
             <div className="secondhead">
               <div className="bounding">
